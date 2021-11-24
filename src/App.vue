@@ -34,6 +34,16 @@ export default {
   box-sizing: border-box;
 }
 #app {
-  
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+// container generale
+.ms-container {
+  display: flex;
+  width: 67%;
+  margin: 0 auto;
+}
+
 </style>

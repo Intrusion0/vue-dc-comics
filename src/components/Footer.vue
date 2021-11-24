@@ -7,34 +7,52 @@
                         <h3>DC COMICS</h3>
                         <ul>
                             <li>
-                                Characters
+                                <a href="#">
+                                    Characters
+                                </a>
                             </li>
                             <li>
-                                Comics
+                                <a href="#">
+                                    Comics
+                                </a>
                             </li>
                             <li>
-                                Movies
+                                <a href="#">
+                                    Movies
+                                </a>
                             </li>
                             <li>
-                                TV
+                                <a href="#">
+                                    TV
+                                </a>
                             </li>
                             <li>
-                                Games
+                                <a href="#">
+                                    Games
+                                </a>
                             </li>
                             <li>
-                                Videos
+                                <a href="#">
+                                    Videos
+                                </a>
                             </li>
                             <li>
-                                News
+                                <a href="#">
+                                    News
+                                </a>
                             </li>
                         </ul>
                         <h3>SHOP</h3>
                         <ul>
                             <li>
-                                Shop DC
+                                <a href="#">
+                                    Shop DC
+                                </a>
                             </li>
                             <li>
-                                Shop DC Collectibles
+                                <a href="#">
+                                    Shop DC Collectibles
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -42,37 +60,59 @@
                         <h3>DC</h3>
                         <ul>
                             <li>
-                                Terms Of Use
+                                <a href="#">
+                                    Terms Of Use
+                                </a>
                             </li>
                             <li>
-                                Privacy policy (New)
+                                <a href="#">
+                                    Privacy policy (New)
+                                </a>
                             </li>
                             <li>
-                                Ad Choices
+                                <a href="#">
+                                    Ad Choices
+                                </a>
                             </li>
                             <li>
-                                Advertising
+                                <a href="#">
+                                    Advertising
+                                </a>
                             </li>
                             <li>
-                                Jobs
+                                <a href="#">
+                                    Jobs
+                                </a>
                             </li>
                             <li>
-                                Subscriptions
+                                <a href="#">
+                                    Subscriptions
+                                </a>
                             </li>
                             <li>
-                                Talent Workshops
+                                <a href="#">
+                                    Talent Workshops
+                                </a>
                             </li>
                             <li>
-                                CPSC Certificates
+                                <a href="#">
+                                    CPSC Certificates
+                                </a>
                             </li>
                             <li>
-                                Ratings
+                                <a href="#">
+                                    Ratings
+                                </a>
                             </li>
                             <li>
-                                Shop Help
+                                <a href="#">
+                                    Shop Help
+                                </a>
                             </li>
                             <li>
-                                Contact Us
+                                <a href="#">
+                                    Contact Us
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -80,19 +120,29 @@
                         <h3>SITES</h3>
                         <ul>
                             <li>
-                                DC
+                                <a href="#">
+                                    DC
+                                </a>
                             </li>
                             <li>
-                                MAD Magazine
+                                <a href="#">
+                                    MAD Magazine
+                                </a>
                             </li>
                             <li>
-                                DC Kids
+                                <a href="#">
+                                    DC Kids
+                                </a>
                             </li>
                             <li>
-                                Dc Universe
+                                <a href="#">
+                                    Dc Universe
+                                </a>
                             </li>
                             <li>
-                                DC Power Visa
+                                <a href="#">
+                                    DC Power Visa
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +154,41 @@
         </section>
         <section id="social-footer">
             <div class="ms-container">
-
+                <div class="btn-signup">
+                    <a href="#">SIGN-UP NOW!</a>
+                </div>
+                <div class="socials">
+                    <span>
+                        FOLLOW US
+                    </span>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-facebook.png" alt="logo facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-twitter.png" alt="logo twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-youtube.png" alt="logo youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-pinterest.png" alt="logo pinterest">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-periscope.png" alt="logo periscope">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </footer>
@@ -125,22 +209,90 @@ footer {
     height: 450px;
 
     #comics-footer {
-        display: flex;
-        width: 100%;
         background-image: url('../assets/img/footer-bg.jpg');
-        // debug
-        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
 
         .nav-footer {
             display: flex;
+            width: 50%;
+            padding: 20px 0;
+
+            & div {
+                margin-right: 30px;
+            }
+
+            h3 {
+                color: white;
+                margin: 20px 0 20px;
+                font-size: 18px;
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    margin: 5px 0;
+
+                    & a {
+                        text-decoration: none;
+                        color: #959595;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .logo-footer {
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+            position: relative;
+            top: -100px;
+            left: 0;
         }
     }
 
     #social-footer {
         width: 100%;
         background-color: #303030;
-        // debug
-        height: 100px;
+        padding: 20px 0;
+
+        .btn-signup {
+            display: flex;
+            align-items: center;
+            width: 50%;
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                border: 2px solid #1068ba;
+                padding: 10px 13px;
+            }
+        }
+
+        .socials {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 50%;
+
+            span {
+                color: #0282f9;
+                font-weight: 600;
+                margin-right: 20px;
+            }
+
+            ul {
+                list-style: none;
+
+                & li {
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+            }
+        }
     }
 }
 </style>
