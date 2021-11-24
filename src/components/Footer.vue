@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="logo-footer">
-                    <img :src="logoFooter" alt="logo dc">
+                    <img :src="require(`@/assets/img/${logoFooter}`)" alt="logo dc">
                 </div>
             </div>
         </section>
@@ -59,7 +59,7 @@
                     <ul>
                         <li v-for="icon, a in iconsSocials" :key="a">
                             <a :href="icon.link">
-                                <img :src="icon.pictureIcon" :alt="icon.name">
+                                <img :src="require(`@/assets/img/footer-${icon.pictureIcon}`)" :alt="icon.name">
                             </a>
                         </li>
                     </ul>
@@ -74,7 +74,7 @@ export default {
     name: 'Footer',
     data() {
         return {
-            logoFooter: require('@/assets/img/dc-logo-bg.png'),
+            logoFooter: 'dc-logo-bg.png',
             dcComicsElements: [
                 {
                     link: '#',
@@ -188,27 +188,27 @@ export default {
                 {
                     link: '#',
                     name: 'facebook',
-                    pictureIcon: require('@/assets/img/footer-facebook.png')
+                    pictureIcon: 'facebook.png'
                 },
                 {
                     link: '#',
                     name: 'twitter',
-                    pictureIcon: require('@/assets/img/footer-twitter.png')
+                    pictureIcon: 'twitter.png'
                 },
                 {
                     link: '#',
                     name: 'youtube',
-                    pictureIcon: require('@/assets/img/footer-youtube.png')
+                    pictureIcon: 'youtube.png'
                 },
                 {
                     link: '#',
                     name: 'pinterest',
-                    pictureIcon: require('@/assets/img/footer-pinterest.png')
+                    pictureIcon: 'pinterest.png'
                 },
                 {
                     link: '#',
                     name: 'periscope',
-                    pictureIcon: require('@/assets/img/footer-periscope.png')
+                    pictureIcon: 'periscope.png'
                 }
             ]
         }
@@ -216,15 +216,13 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 footer {
     display: flex;
     flex-direction: column;
-    // debug
-    height: 450px;
 
     #comics-footer {
+        height: 370px;
         background-image: url('../assets/img/footer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;

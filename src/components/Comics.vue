@@ -13,7 +13,7 @@
                     <ul>
                         <li v-for="comicsEl, j in comicsElements" :key="j">
                             <a :href="comicsEl.link">
-                                <img :src="comicsEl.picture" :alt="comicsEl.text">
+                                <img :src="require(`@/assets/img/${comicsEl.picture}`)" :alt="comicsEl.text">
                                 <span>DIGITAL COMICS</span>
                             </a>
                         </li>
@@ -33,27 +33,27 @@ export default {
             {
                 text: 'DIGITAL COMICS',
                 link: '#',
-                picture: require('@/assets/img/buy-comics-digital-comics.png')
+                picture: 'buy-comics-digital-comics.png'
             },
             {
                 text: 'DC MERCHANDISE',
                 link: '#',
-                picture: require('@/assets/img/buy-comics-merchandise.png')
+                picture: 'buy-comics-merchandise.png'
             },
             {
                 text: 'SUBSCRIPTION',
                 link: '#',
-                picture: require('@/assets/img/buy-comics-subscriptions.png')
+                picture: 'buy-comics-subscriptions.png'
             },
             {
                 text: 'COMICS SHOP LOCATOR',
                 link: '#',
-                picture: require('@/assets/img/buy-comics-shop-locator.png')
+                picture: 'buy-comics-shop-locator.png'
             },
             {
                 text: 'DC POWER VISA',
                 link: '#',
-                picture: require('@/assets/img/buy-dc-power-visa.svg')
+                picture: 'buy-dc-power-visa.svg'
             }
           ]
         }
@@ -100,7 +100,7 @@ div.comics {
                         font-size: 14px;
 
                         img {
-                            width: 55px;
+                            width: 60px;
                             height: 65px;
                         }
 
