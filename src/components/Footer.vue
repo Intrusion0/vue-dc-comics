@@ -6,52 +6,17 @@
                     <div>
                         <h3>DC COMICS</h3>
                         <ul>
-                            <li>
-                                <a href="#">
-                                    Characters
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Comics
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Movies
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    TV
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Games
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Videos
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    News
+                            <li v-for="dcComics, e in dcComicsElements" :key="e">
+                                <a :href="dcComics.link">
+                                    {{dcComics.name}}
                                 </a>
                             </li>
                         </ul>
                         <h3>SHOP</h3>
                         <ul>
-                            <li>
-                                <a href="#">
-                                    Shop DC
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Shop DC Collectibles
+                            <li v-for="shop, d in shopElements" :key="d">
+                                <a :href="shop.link">
+                                    {{shop.name}}
                                 </a>
                             </li>
                         </ul>
@@ -59,59 +24,9 @@
                     <div>
                         <h3>DC</h3>
                         <ul>
-                            <li>
-                                <a href="#">
-                                    Terms Of Use
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Privacy policy (New)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Ad Choices
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Advertising
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Jobs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Subscriptions
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Talent Workshops
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    CPSC Certificates
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Ratings
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Shop Help
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Contact Us
+                            <li v-for="dc, c in dcElements" :key="c">
+                                <a :href="dc.link">
+                                    {{dc.name}}
                                 </a>
                             </li>
                         </ul>
@@ -119,36 +34,16 @@
                     <div>
                         <h3>SITES</h3>
                         <ul>
-                            <li>
-                                <a href="#">
-                                    DC
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    MAD Magazine
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    DC Kids
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Dc Universe
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    DC Power Visa
+                            <li v-for="site, b in sitesElements" :key="b">
+                                <a :href="site.link">
+                                    {{site.name}}
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="logo-footer">
-                    <img src="../assets/img/dc-logo-bg.png" alt="logo dc">
+                    <img :src="logoFooter" alt="logo dc">
                 </div>
             </div>
         </section>
@@ -162,29 +57,9 @@
                         FOLLOW US
                     </span>
                     <ul>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-facebook.png" alt="logo facebook">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-twitter.png" alt="logo twitter">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-youtube.png" alt="logo youtube">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-pinterest.png" alt="logo pinterest">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="../assets/img/footer-periscope.png" alt="logo periscope">
+                        <li v-for="icon, a in iconsSocials" :key="a">
+                            <a :href="icon.link">
+                                <img :src="icon.pictureIcon" :alt="icon.name">
                             </a>
                         </li>
                     </ul>
@@ -196,7 +71,148 @@
 
 <script>
 export default {
-  name: 'Footer'
+    name: 'Footer',
+    data() {
+        return {
+            logoFooter: require('@/assets/img/dc-logo-bg.png'),
+            dcComicsElements: [
+                {
+                    link: '#',
+                    name: 'Characters'
+                },
+                {
+                    link: '#',
+                    name: 'Comics'
+                },
+                {
+                    link: '#',
+                    name: 'Movies'
+                },
+                {
+                    link: '#',
+                    name: 'TV'
+                },
+                {
+                    link: '#',
+                    name: 'Games'
+                },
+                {
+                    link: '#',
+                    name: 'Videos'
+                },
+                {
+                    link: '#',
+                    name: 'News'
+                }
+
+            ],
+            shopElements: [
+                {
+                    link: '#',
+                    name: 'Shop DC'
+                },
+                {
+                    link: '#',
+                    name: 'Shop DC Collectibles'
+                }
+            ],
+            dcElements: [
+                {
+                    link: '#',
+                    name: 'Terms Of Use'
+                },
+                {
+                    link: '#',
+                    name: 'Privacy policy (New)'
+                },
+                {
+                    link: '#',
+                    name: 'Ad Choices'
+                },
+                {
+                    link: '#',
+                    name: 'Advertising'
+                },
+                {
+                    link: '#',
+                    name: 'Jobs'
+                },
+                {
+                    link: '#',
+                    name: 'Subscriptions'
+                },
+                {
+                    link: '#',
+                    name: 'Talent Workshops'
+                },
+                {
+                    link: '#',
+                    name: 'CPSC Certificates'
+                },
+                {
+                    link: '#',
+                    name: 'Ratings'
+                },
+                {
+                    link: '#',
+                    name: 'Shop Help'
+                },
+                {
+                    link: '#',
+                    name: 'Contact Us'
+                },
+            ],
+            sitesElements: [
+                {
+                    link: '#',
+                    name: 'DC'
+                },
+                {
+                    link: '#',
+                    name: 'MAD Magazine'
+                },
+                {
+                    link: '#',
+                    name: 'DC Kids'
+                },
+                {
+                    link: '#',
+                    name: 'DC Universe'
+                },
+                {
+                    link: '#',
+                    name: 'DC Power Visa'
+                },
+            ],
+            iconsSocials: [
+                {
+                    link: '#',
+                    name: 'facebook',
+                    pictureIcon: require('@/assets/img/footer-facebook.png')
+                },
+                {
+                    link: '#',
+                    name: 'twitter',
+                    pictureIcon: require('@/assets/img/footer-twitter.png')
+                },
+                {
+                    link: '#',
+                    name: 'youtube',
+                    pictureIcon: require('@/assets/img/footer-youtube.png')
+                },
+                {
+                    link: '#',
+                    name: 'pinterest',
+                    pictureIcon: require('@/assets/img/footer-pinterest.png')
+                },
+                {
+                    link: '#',
+                    name: 'periscope',
+                    pictureIcon: require('@/assets/img/footer-periscope.png')
+                }
+            ]
+        }
+    }
 }
 </script>
 
