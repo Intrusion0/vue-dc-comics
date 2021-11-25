@@ -1,23 +1,29 @@
 <template>
     <div class="comics">
+        <!-- Componente jumbotron Comics -->
+        <JumbotronComics/>
         <section id="content-main">
             <div class="ms-container">
                 <span>
+                    <!-- Componente cards Comics -->
                     --&#62; Content goes here &#60;--
                 </span>
             </div>
         </section>
+        <!-- Componente Icons Comics -->
         <IconsComics/>
     </div>
 </template>
 
 <script>
 import IconsComics from './IconsComics.vue'
+import JumbotronComics from './JumbotronComics.vue'
 
 export default {
   name: 'Comics',
   components: {
-      IconsComics
+      IconsComics,
+      JumbotronComics
   }
 }
 </script>
