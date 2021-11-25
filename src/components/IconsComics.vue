@@ -84,6 +84,12 @@ export default {
                         }
                     }
                 }
+
+                li:nth-child(4) {
+                    img {
+                        width: 45px;
+                    }
+                }
             }
         }
     }
